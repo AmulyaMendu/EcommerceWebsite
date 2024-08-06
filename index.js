@@ -51,7 +51,7 @@ if (process.env.NODE_ENV === "production") {
 // app.get("/", (req, res) => {
 //     res.send("welcome to website")
 // })
-const port = process.env.PORT || 8080
-app.listen(port, () => {
-    console.log(`server is connected on ${process.env.DEV_MODE} mode on ${port}`)
+const PORT = process.env.PORT || 8080
+app.listen(PORT, () => {
+    console.log(`server is connected on ${process.env.DEV_MODE} mode on ${PORT}`)
 })
