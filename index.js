@@ -9,10 +9,10 @@ import productRoutes from "./routes/productRoutes.js"
 import cors from 'cors'
 import path from "path"
 dotenv.config();
-const app = express()
 
 //database config
 connectDB()
+const app = express()
 
 //middlewares
 app.use(cors())
@@ -51,14 +51,8 @@ if (process.env.NODE_ENV === "production") {
 // --------------------deployment--------------
 
 
-// app.get("/", (req, res) => {
-//     res.send("welcome to website")
-// })
-// const PORT = process.env.PORT || 8080
-// app.listen(PORT, () => {
-//     console.log(`server is connected on ${process.env.DEV_MODE} mode on ${PORT}`)
-// })
 const PORT = process.env.PORT || 8000;
+const DEV_MODE = process.env.DEV_MODE;
 app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
+    console.log(`server is running on ${DEV_MODE} mode on port ${PORT}`.bgMagenta.bgBlue)
+})
