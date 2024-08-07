@@ -43,7 +43,6 @@ if (process.env.NODE_ENV === "production") {
     });
 
 } else {
-    console.log("ghjhg")
     app.get("/", (req, res) => {
         res.send("API is running here..");
     });
@@ -59,7 +58,7 @@ if (process.env.NODE_ENV === "production") {
 // app.listen(PORT, () => {
 //     console.log(`server is connected on ${process.env.DEV_MODE} mode on ${PORT}`)
 // })
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
